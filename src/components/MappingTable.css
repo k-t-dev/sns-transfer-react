@@ -1,0 +1,155 @@
+.mapping-form {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    max-width: 600px; /* Set a consistent width for the form */
+    margin: 0 auto; /* Center the form */
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  input,
+  textarea {
+    width: 100%; /* Make inputs and textarea span the form width */
+    max-width: 100%; /* Prevent elements from overflowing the form */
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+  }
+  
+  textarea {
+    resize: vertical; /* Allow vertical resizing only */
+    min-height: 80px; /* Set a minimum height */
+  }
+  
+  button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  button[type="submit"]:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .table-container {
+    max-width: 900px; /* Set a maximum width for the container */
+    margin: 20px auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .mapping-table {
+    width: 100%; /* Ensure the table spans the container */
+    border-collapse: collapse;
+  }
+  
+  .mapping-table th,
+  .mapping-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .mapping-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+  
+  .mapping-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .mapping-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+
+  .table-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .mapping-form {
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 10px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+  }
+  
+  .mapping-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .mapping-table th,
+  .mapping-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  .mapping-table input,
+  .mapping-table textarea {
+    width: 100%;
+    padding: 5px;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
