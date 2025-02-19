@@ -21,7 +21,7 @@ const MappingTable = () => {
   // Fetch mappings data from the server
   const fetchMappings = async () => {
     try {
-      const response = await axios.get("http://0.0.0.0:5009/sns_transfer/mappings");
+      const response = await axios.get("https://4qb9nqvjs6.execute-api.ap-northeast-1.amazonaws.com/dev/mappings");
       setMappings(response.data.data || []);
     } catch (error) {
       console.error("Error fetching mappings:", error);
@@ -126,7 +126,7 @@ const getButtonStyle = (id) => {
       console.log("Saving new mapping:", newMapping);
       
       // Make the POST request to the server to add the new mapping
-      const response = await axios.post("http://0.0.0.0:5009/sns_transfer/add_account", newMapping);
+      const response = await axios.post("https://4qb9nqvjs6.execute-api.ap-northeast-1.amazonaws.com/dev/add_account", newMapping);
   
       if (response.status === 200) {
         alert("New mapping added successfully!");
@@ -166,7 +166,7 @@ const getButtonStyle = (id) => {
     try {
       console.log("Deleting mapping with Instagram ID:", deleteId);
 
-      const response = await axios.post("http://0.0.0.0:5009/sns_transfer/delete_account", {
+      const response = await axios.post("https://4qb9nqvjs6.execute-api.ap-northeast-1.amazonaws.com/dev/delete_account", {
         mapping_id: deleteId,
       });
 
@@ -218,7 +218,7 @@ const getButtonStyle = (id) => {
         updates: { updatedMappingsDict },
       });
 
-      const response = await axios.post("http://0.0.0.0:5009/sns_transfer/update_status", {
+      const response = await axios.post("https://4qb9nqvjs6.execute-api.ap-northeast-1.amazonaws.com/dev/update_status", {
         updates: updatedMappingsDict,
       });
 
