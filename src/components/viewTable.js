@@ -10,7 +10,7 @@ const ViewTable = () => {
     // Fetch the data for the mapping table
     const fetchMappings = async () => {
       try {
-        const response = await axios.get("http://0.0.0.0:5009/sns_transfer/mappings");
+        const response = await axios.get("https://4qb9nqvjs6.execute-api.ap-northeast-1.amazonaws.com/dev/mappings");
         setMappings(response.data.data || []);
       } catch (error) {
         console.error("Error fetching mappings:", error);
