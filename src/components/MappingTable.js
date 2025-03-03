@@ -262,21 +262,21 @@ const getButtonStyle = (id) => {
       {/* Sidebar - Always visible */}
       <div style={styles.sidebar}>
         <div style={styles.sidebarHeader}>
-          <h3 style={styles.sidebarTitle}>Navigation</h3>
+          <h3 style={styles.sidebarTitle}>目次</h3>
         </div>
         <ul style={styles.navList}>
           <li style={styles.navItem}>
-            <Link to="/update" style={styles.navLink}>Update Mappings</Link>
+            <Link to="/update" style={styles.navLink}>契約の編集</Link>
           </li>
           <li style={styles.navItem}>
-            <Link to="/view-table" style={styles.navLink}>View Table</Link>
+            <Link to="/view-table" style={styles.navLink}>最新の契約</Link>
           </li>
         </ul>
       </div>
 
       {/* Main Content */}
       <div style={styles.mainContent}>
-        <h2>Add New Mapping</h2>
+        <h2>アカウントの追加</h2>
         <form
           onSubmit={(e) => {
             e.preventDefault();
@@ -305,7 +305,7 @@ const getButtonStyle = (id) => {
             />
           </div>
           <div className="form-group">
-            <label>Company Name:</label>
+            <label>会社名/店舗名:</label>
             <input
               type="text"
               name="company_name"
@@ -315,7 +315,7 @@ const getButtonStyle = (id) => {
             />
           </div>
           <div className="form-group">
-            <label>Start Contract Date:</label>
+            <label>契約開始日:</label>
             <input
               type="date"
               name="start_contract_date"
@@ -325,7 +325,7 @@ const getButtonStyle = (id) => {
             />
           </div>
           <div className="form-group">
-            <label>End Contract Date:</label>
+            <label>契約終了日:</label>
             <input
               type="date"
               name="end_contract_date"
@@ -335,7 +335,7 @@ const getButtonStyle = (id) => {
             />
           </div>
           <div className="form-group">
-            <label>Note:</label>
+            <label>備考:</label>
             <textarea
               name="note"
               value={newMapping.note}
@@ -347,7 +347,7 @@ const getButtonStyle = (id) => {
           </button>
         </form>
 
-        <h2>Delete Mapping</h2>
+        <h2>アカウント削除</h2>
         <form
           onSubmit={(e) => {
             e.preventDefault();
@@ -356,7 +356,7 @@ const getButtonStyle = (id) => {
         >
           {/* Delete Mapping form */}
           <div className="form-group">
-            <label>Instagram ID to Delete:</label>
+            <label>Instagram ID を入力してアカウントを削除してください:</label>
             <input
               type="text"
               value={deleteId}
@@ -369,18 +369,18 @@ const getButtonStyle = (id) => {
           </button>
         </form>
 
-        <h2>Mapping Table</h2>
+        <h2>アカウント情報の編集</h2>
         {mappings.length > 0 ? (
           <table className="mapping-table">
             <thead>
               <tr>
                 <th>Instagram ID</th>
                 <th>Google Business ID</th>
-                <th>Company Name</th>
-                <th>Start Contract Date</th>
-                <th>End Contract Date</th>
-                <th>Note</th>
-                <th>Action</th>
+                <th>会社名/店舗名</th>
+                <th>契約開始日</th>
+                <th>契約終了日</th>
+                <th>備考</th>
+                <th>ステータス</th>
               </tr>
             </thead>
             <tbody>
@@ -458,7 +458,7 @@ const getButtonStyle = (id) => {
             </tbody>
           </table>
         ) : (
-          <p>No mappings available to display.</p>
+          <p>アカウント情報が取得できません。</p>
         )}
         <button onClick={applyChanges} disabled={isSubmitting}>
           {isSubmitting ? "Applying Changes..." : "Apply Changes"}

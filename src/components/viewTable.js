@@ -56,14 +56,14 @@ const ViewTable = () => {
       {/* Sidebar - Always visible */}
       <div style={styles.sidebar}>
         <div style={styles.sidebarHeader}>
-          <h3 style={styles.sidebarTitle}>Navigation</h3>
+          <h3 style={styles.sidebarTitle}>目次</h3>
         </div>
         <ul style={styles.navList}>
           <li style={styles.navItem}>
-            <Link to="/update" style={styles.navLink}>Update Mappings</Link>
+            <Link to="/update" style={styles.navLink}>契約の編集</Link>
           </li>
           <li style={styles.navItem}>
-            <Link to="/view-table" style={styles.navLink}>View Table</Link>
+            <Link to="/view-table" style={styles.navLink}>最新の契約</Link>
           </li>
         </ul>
       </div>
@@ -76,11 +76,11 @@ const ViewTable = () => {
             <tr>
               <th>Instagram ID</th>
               <th>Google Business ID</th>
-              <th>Company Name</th>
-              <th>Status</th>
-              <th>Start Contract Date</th>
-              <th>End Contract Date</th>
-              <th>Note</th>
+              <th>会社名/店舗名</th>
+              <th>ステータス</th>
+              <th>契約開始日</th>
+              <th>契約終了日</th>
+              <th>備考</th>
             </tr>
           </thead>
           <tbody>
@@ -97,7 +97,7 @@ const ViewTable = () => {
             ))}
           </tbody>
         </table>
-        <button onClick={downloadCSV} style={styles.downloadButton}>Download as CSV</button>
+        <button onClick={downloadCSV} style={styles.downloadButton}>CSV出力</button>
       </div>
     </div>
   );
