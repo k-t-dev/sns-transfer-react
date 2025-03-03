@@ -70,7 +70,7 @@ const ViewTable = () => {
 
       {/* Main Content */}
       <div style={styles.mainContent}>
-        <h2 style={styles.header}>Mapping Table</h2>
+        <h2 style={styles.header}>契約状況一覧</h2>
         <table style={styles.table}>
           <thead>
             <tr>

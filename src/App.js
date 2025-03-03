@@ -23,7 +23,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <h1>Welcome to the App</h1>
+        <h1>SNS 自動投稿マネージャー</h1>
         <Routes>
           {/* Default route to redirect to /view-table or /login */}
           <Route
