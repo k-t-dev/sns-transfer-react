@@ -6,11 +6,19 @@ import { Link } from "react-router-dom"; // Import Link for routing
 const ViewTable = () => {
   const [mappings, setMappings] = useState([]);
 
+  const apiKey = 'm9e6SXy4zm6PKfeG5Xud52U3fDEuutYQ4t9r5zMu';
+
   useEffect(() => {
     // Fetch the data for the mapping table
     const fetchMappings = async () => {
       try {
-        const response = await axios.get("https://dyhbv4khoh.execute-api.ap-northeast-1.amazonaws.com/dev/mappings");
+        const response = await axios.get("https://dyhbv4khoh.execute-api.ap-northeast-1.amazonaws.com/dev/mappings",
+          {
+            headers: {
+              'x-api-key': apiKey,  // APIキーをヘッダーに追加
+            },
+          }
+        );
         setMappings(response.data.data || []);
       } catch (error) {
         console.error("Error fetching mappings:", error);
